@@ -1,0 +1,95 @@
+:root {
+  --primary-color: #1ABC9C;
+  --secondary-color: #FF6B6B;
+  --accent-color: #8E44AD;
+  --bg-color: #F5F5F5;
+  --text-color: #2C3E50;
+  --border-color: #BDC3C7;
+  --button-hover-color: #16A085;
+  --font-family-primary: 'Roboto', sans-serif;
+  --font-family-futuristic: 'Orbitron', sans-serif;
+}
+
+[data-theme='dark'] {
+  --bg-color: #1C1C1C;
+  --text-color: #ECF0F1;
+  --primary-color: #1ABC9C;
+  --secondary-color: #FF6B6B;
+  --accent-color: #8E44AD;
+  --border-color: #34495E;
+  --button-hover-color: #16A085;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-primary);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+/* Scrollbar Styling */
+.messages {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary-color) transparent;
+}
+
+.messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+}
+
+/* Smooth transitions for theme changes */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* General animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
